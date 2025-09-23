@@ -33,6 +33,7 @@ for (let j = 0; j < 10; j++) {
     let punteggio = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     bowling.players[4].scores.push(punteggio);
     bowling.players[4].scores.reduce((acc, n) => acc + n, 0);
+    bowling.players[4].total = bowling.players[4].scores.reduce((acc, n) => acc + n, 0);
     console.log(bowling.players[4].name + ' ha totalizzato ' + bowling.players[4].scores.reduce((acc, n) => acc + n, 0) + ' punti');
 }
 
